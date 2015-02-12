@@ -1,2 +1,2 @@
 # our-kitchen
-(link:benjamin-sweeney.github.io/our-kitchen/ text:View Site)
+[View Site](http://benjamin-sweeney.github.io/our-kitchen/)
