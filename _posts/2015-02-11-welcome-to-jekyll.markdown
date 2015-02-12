@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+permalink: welcome-to-jekyll
 date:   2015-02-11 11:24:15
 categories: jekyll update
 ---

@@ -1,0 +1,91 @@
+.icon-twitter:before, .icon-dribbble:before, .icon-github:before, .icon-linkedin:before, .icon-codepen:before {
+	content: ' ';
+	width: 2em;
+	background-size: cover;
+	display: inline-block;
+	height: 2em;
+}
+.icon-twitter:before { background: url(../assets/images/twitter.svg) top center no-repeat; }
+.icon-dribbble:before { background: url(../assets/images/dribbble.svg) top center no-repeat; }
+.icon-github:before { background: url(../assets/images/github.svg) top center no-repeat; }
+.icon-linkedin:before { background: url(../assets/images/linkedin.svg) top center no-repeat; }
+.icon-codepen:before { background: url(../assets/images/codepen.svg) top center no-repeat; }
+
+.has-tooltip {
+	position: relative;
+
+	 .tooltip {
+		font-family: $sans-serif-font;
+		font-weight: 400;
+	 	font-size: .35em;
+		letter-spacing: .035em;
+		background: $primary-color;
+		bottom: 100%;
+		color: white;
+		display: block;
+		left: 0;
+		margin-bottom: 2.2em;
+		opacity: 0;
+		padding: .15em;
+		position: absolute;
+		visibility: hidden;
+		transform: translateY(10px);
+		transition: all .25s ease-out;
+		// border-radius: .25em;
+
+		&:before {
+			bottom: -0.5em;
+			content: "";
+			display: block;
+			height: 0.5em;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+
+		&:after {
+			border-left: solid transparent 10px;
+			border-right: solid transparent 10px;
+			border-top: solid $primary-color 10px;
+			bottom: -10px;
+			content: " ";
+			height: 0;
+			left: 50%;
+			margin-left: -13px;
+			position: absolute;
+			width: 0;
+		}
+	}
+}
+.has-tooltip:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.social-icons {
+  text-align: center;
+  list-style: none;
+
+	li {
+		display: inline-block;
+		margin: .5em;
+		
+		a {
+			font-size: 2em;
+			border-bottom: none;
+			color: #ddd;
+
+			// Icon Hover Colors
+			&.icon-twitter:hover { color: #55acee; }
+			&.icon-dribbble:hover { color: #ea4c89 }
+			&.icon-github:hover { color: #76cc1e; }
+			&.icon-linkedin:hover { color: #0e76a8; }
+			&.icon-codepen:hover { color: #666666; }
+
+			.tooltip {
+				width: 6em;
+			}
+		}
+	}
+}
